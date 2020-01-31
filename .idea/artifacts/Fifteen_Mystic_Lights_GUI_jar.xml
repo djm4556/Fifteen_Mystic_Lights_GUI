@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Fifteen Mystic Lights GUI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Fifteen_Mystic_Lights_GUI_jar</output-path>
+    <root id="archive" name="Fifteen Mystic Lights GUI.jar">
+      <element id="module-output" name="Fifteen Mystic Lights GUI" />
+    </root>
+  </artifact>
+</component>
