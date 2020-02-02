@@ -34,7 +34,11 @@ public class GUI extends Application {
      */
     @Override
     public void start(Stage stage) throws Exception {
-        Board board = new Board(this); //Setup
+        Board board; //Setup of main elements
+        if(getParameters().getRaw().size() == 0)
+            board = new Board(this);
+        else board = new Board(this, //Custom size?
+                Integer.parseInt(getParameters().getRaw().get(0)));
         center = makeCenterPane(board);
         bottom = makeBottomPane(board);
         FlowPane flow = new FlowPane();
@@ -190,9 +194,9 @@ public class GUI extends Application {
 
     /**
      * The main method, which launches the application
-     * @param args Command line args (ignored)
+     * @param args Command line args (size)
      */
     public static void main(String[] args) {
-        Application.launch();
+        Application.launch(args);
     }
 }
